@@ -8,7 +8,7 @@ using namespace std;
 	int main() {
 		int marks[SIZE];
 	
-		for (int i = 2; i <= SIZE; i += 2)
+		for (int i = 0; i < SIZE; i++)
 		{
 			marks[i] = rand() % (MAX_MARK + 1);
 		}
@@ -24,8 +24,10 @@ using namespace std;
 
 		for (int i = 0; i < SIZE; i++)
 		{
-			avg = avg / SIZE;
+			avg += marks[i];
 		}
+
+		avg = avg / SIZE;
 
 		cout << "\nAverage mark is " << avg << endl;
 		return 0;
